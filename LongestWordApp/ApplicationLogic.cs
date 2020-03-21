@@ -14,7 +14,7 @@ namespace LongestWordApp
             var finalList = new List<string>();
                 foreach (var word in allWords)
                 {
-                    if(ValidationLogic.MatchIfCurrentWordMatchesDynamicRegex(bannedChars, word))
+                    if(ValidationLogic.MatchTrueIfCurrentWordMatchesDynamicPattern(bannedChars, word))
                     {
                         finalList.Add(word);
                     }
@@ -26,7 +26,7 @@ namespace LongestWordApp
             int count = 0;
                 foreach (var word in allWords)
                 {
-                    if(ValidationLogic.MatchIfCurrentWordMatchesDynamicRegex(bannedChars, word))
+                    if(ValidationLogic.MatchTrueIfCurrentWordMatchesDynamicPattern(bannedChars, word))
                     {
                         count++;
                     }

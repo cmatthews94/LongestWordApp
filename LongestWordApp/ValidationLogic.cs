@@ -6,13 +6,17 @@ namespace LongestWordApp
     public static class ValidationLogic
     {
         //after sleeping and coming back to this issue, this seems to be the most effective way of dealing with the validation.
-        public static bool DoesStringContainOnlyLetters(string userInput)
+        public static bool IsUserInputValidBannedCharacters(string userInput)
         {
-            char[] input = userInput.ToCharArray();
+            char[] userInputAsCharArray = userInput.ToCharArray();
 
-            foreach(char c in input)
+            if(String.IsNullOrEmpty(userInput) || userInput.Length > 10)
             {
-                if (!Char.IsLetter(c))
+                return false;
+            }
+            foreach (char c in userInputAsCharArray)
+            {
+                if(!Char.IsLetter(c)|| Char.IsWhiteSpace(c))
                 {
                     return false;
                 }
@@ -20,13 +24,17 @@ namespace LongestWordApp
             }
             return false;
         }
-        public static bool DoesStringContainOnlyNumbers(string userInput)
+        public static bool IsUserInputValidResultsQuantity(string userInput)
         {
             char[] input = userInput.ToCharArray();
 
-            foreach(char c in input)
+            if (String.IsNullOrEmpty(userInput) || int.Parse(userInput) > 50)
             {
-                if(!Char.IsDigit(c))
+                return false;
+            }
+            foreach (char c in input)
+            {
+                if(!Char.IsDigit(c) || Char.IsWhiteSpace(c))
                 {
                     return false;
                 }
@@ -34,19 +42,7 @@ namespace LongestWordApp
             }
             return false;
         }
-
-        //Regex turned out to  not be the ideal solution to the issues I was having. Will continue to learn it as it does feel valuable.
-
-        //Matches as true if all values in an input are numbers
-        [Obselete]
-        public static Regex MatchIfStringOnlyContainsNumbers = new Regex(@"\d+");
-        //Matches as true if all values in an input are letters
-        [Obselete]
-        public static Regex MatchIfStringOnlyContainsLetters = new Regex(@"^\d");
-
-        //creates a new Regex pattern to filter out words that include banned letters
-        [Obselete]
-        public static bool MatchIfCurrentWordMatchesDynamicRegex(string bannedChars, string word)
+        public static bool MatchTrueIfCurrentWordMatchesDynamicPattern(string bannedChars, string word)
         {
             if(!CreateNewDynamicRegexPattern(bannedChars).IsMatch(word))
             {
@@ -57,8 +53,6 @@ namespace LongestWordApp
                 return false;
             }
         }
-        //Matches as true if all values contain the banned letters
-        [Obselete]
         public static Regex CreateNewDynamicRegexPattern(string bannedChars)
         {
             return new Regex(@"[" + bannedChars + @"]");
