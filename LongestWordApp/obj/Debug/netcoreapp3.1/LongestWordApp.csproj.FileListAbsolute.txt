@@ -1,0 +1,13 @@
+C:\Github\LongestWordApp\LongestWordApp\bin\Debug\netcoreapp3.1\LongestWordApp.exe
+C:\Github\LongestWordApp\LongestWordApp\obj\Debug\netcoreapp3.1\LongestWordApp.csprojAssemblyReference.cache
+C:\Github\LongestWordApp\LongestWordApp\obj\Debug\netcoreapp3.1\LongestWordApp.AssemblyInfoInputs.cache
+C:\Github\LongestWordApp\LongestWordApp\obj\Debug\netcoreapp3.1\LongestWordApp.AssemblyInfo.cs
+C:\Github\LongestWordApp\LongestWordApp\bin\Debug\netcoreapp3.1\LongestWordApp.deps.json
+C:\Github\LongestWordApp\LongestWordApp\bin\Debug\netcoreapp3.1\LongestWordApp.runtimeconfig.json
+C:\Github\LongestWordApp\LongestWordApp\bin\Debug\netcoreapp3.1\LongestWordApp.runtimeconfig.dev.json
+C:\Github\LongestWordApp\LongestWordApp\bin\Debug\netcoreapp3.1\LongestWordApp.dll
+C:\Github\LongestWordApp\LongestWordApp\bin\Debug\netcoreapp3.1\LongestWordApp.pdb
+C:\Github\LongestWordApp\LongestWordApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Github\LongestWordApp\LongestWordApp\obj\Debug\netcoreapp3.1\LongestWordApp.csproj.CopyComplete
+C:\Github\LongestWordApp\LongestWordApp\obj\Debug\netcoreapp3.1\LongestWordApp.dll
+C:\Github\LongestWordApp\LongestWordApp\obj\Debug\netcoreapp3.1\LongestWordApp.pdb
